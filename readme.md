@@ -1,4 +1,4 @@
-Cyphers
+Ciphers
 =======
 
-Implementation of some cypher algorithms for educational pursposes.
+Implementation of some cipher algorithms for educational pursposes.
