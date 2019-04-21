@@ -1,5 +1,6 @@
 import ciphers.caesar as caesar
 import ciphers.monoalphabetic as monoalphabetic
+import ciphers.playfair as playfair
 
 
 def test_caesar():
@@ -18,8 +19,6 @@ def test_caesar():
 
 
 def test_monoalphabetic():
-    cipher = monoalphabetic.cipher
-
     MAPPING = {
         'A': 'Z',
         'B': 'A',
@@ -50,6 +49,15 @@ def test_monoalphabetic():
     }
 
     assert (
-        cipher('vamos estudar segurança', MAPPING) ==
+        monoalphabetic.cipher('vamos estudar segurança', MAPPING) ==
         'YZXWF JFIULZG FJQUGZCKZ'
+    )
+
+
+def test_playfair():
+    KEY = 'LABSEC'
+
+    assert (
+        playfair.cipher('departamentodeinformática', KEY) ==
+        'HAQLTUBKSOUNHAKOHMXRSQPIBW'
     )
