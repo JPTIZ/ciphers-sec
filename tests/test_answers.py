@@ -1,6 +1,9 @@
-import ciphers.caesar as caesar
-import ciphers.monoalphabetic as monoalphabetic
-import ciphers.playfair as playfair
+from ciphers import (
+    caesar,
+    monoalphabetic,
+    playfair,
+    vigenere,
+)
 
 
 def test_caesar():
@@ -60,4 +63,13 @@ def test_playfair():
     assert (
         playfair.cipher('departamentodeinformática', KEY) ==
         'HAQLTUBKSOUNHAKOHMXRSQPIBW'
+    )
+
+
+def test_vigenere():
+    KEY = 'secretofmana'
+
+    assert (
+        vigenere.cipher('The hero shall wield the sword', KEY) ==
+        'LLG LXFT SUADP NMXZI TUE WYFVW'
     )
