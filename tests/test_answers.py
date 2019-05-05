@@ -71,5 +71,5 @@ def test_vigenere():
 
     assert (
         vigenere.cipher('The hero shall wield the sword', KEY) ==
-        'LLG LXFT SUADP NMXZI TUE WYFVW'
+        'MMH MYGU TVBEQ ONYAJ UVF XZGWX'
     )

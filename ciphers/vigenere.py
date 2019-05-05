@@ -11,7 +11,7 @@ def cipher(text, key):
     return ''.join(
         caesar.cipher(
             char,
-            shifts=ALPHABET.index(k) if k in ALPHABET else 0
+            shifts=ALPHABET.index(k) + 1 if k in ALPHABET else 0
         )
         for char, k in zip(text, cycle(key))
     )
